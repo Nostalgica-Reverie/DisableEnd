@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "noend",
+  "version": "${version}",
+  "name": "Disable End",
+  "description": "Send players to their spwnpoint when attempting to enter the End.",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/ArcticWarmth/NoEnd"
+  },
+  "mixins": [
+    "noend.mixins.json"
+  ],
+  "license": "MIT",
+  "icon": "assets/noend/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.arcticwarmth.noend.noend.client.DisableEndClient"
+    ],
+    "main": [
+      "net.arcticwarmth.noend.noend.DisableEnd"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
