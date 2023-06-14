@@ -1,0 +1,33 @@
+name: Enhancement
+description: File a bug report
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: old-behavior
+    attributes:
+      label: What currently happens?
+      placeholder: Tell us what you currently see
+    validations:
+      required: false
+  - type: textarea
+    id: new-behavior
+    attributes:
+      label: What do you want to see instead?
+    validations:
+      required: true    
+  - type: textarea
+    id: other
+    attributes:
+      label: Anything else?
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct and have searched for any related issues
+          required: true

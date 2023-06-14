@@ -1,0 +1,66 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What was expected to happen?
+    validations:
+      required: true   
+  - type: textarea
+    id: repro
+    attributes:
+      label: How can this bug be reproduced?
+    validations:
+      required: true  
+  - type: input
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output into https://mclo.gs/
+  - type: input
+    id: loader-ver
+    attributes:
+      label: Fabric version
+    validations:
+      required: true   
+  - type: input
+    id: mod-ver
+    attributes:
+      label: Mod version
+    validations:
+      required: true
+  - type: dropdown
+    id: mc-ver
+    attributes:
+      label: Version
+      description: What version of our minecraft are you running?
+      options:
+        - 1.19.2
+    validations:
+      required: true
+  - type: textarea
+    id: other
+    attributes:
+      label: Anything else?
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct and have searched for any related issues
+          required: true
