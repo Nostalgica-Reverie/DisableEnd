@@ -12,14 +12,13 @@
     "noend.mixins.json"
   ],
   "license": "MIT",
-  "icon": "assets/noend/icon.png",
-  "environment": "*",
+  "environment": "server",
   "entrypoints": {
-    "client": [
-      "net.arcticwarmth.noend.noend.client.DisableEndClient"
-    ],
     "main": [
       "net.arcticwarmth.noend.noend.DisableEnd"
+    ],
+    "server": [
+      "net.arcticwarmth.noend.noend.server.DisableEndServer"
     ]
   },
   "depends": {

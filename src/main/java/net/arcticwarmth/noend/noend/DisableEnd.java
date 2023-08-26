@@ -25,28 +25,9 @@ SOFTWARE.
 package net.arcticwarmth.noend.noend;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
-import net.fabricmc.fabric.api.gamerule.v1.GameRuleFactory;
-import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry;
-import net.minecraft.world.GameRules;
-import net.minecraft.text.Text;
-import static net.minecraft.server.command.CommandManager.*;
+
 
 public class DisableEnd implements ModInitializer {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     /**
      * Runs the mod initializer.
@@ -55,7 +36,5 @@ public class DisableEnd implements ModInitializer {
     public void onInitialize() {
 
     }
-
-    public static final GameRules.Key<GameRules.BooleanRule> DISABLE_END = GameRuleRegistry.register("doDisableEnd", GameRules.Category.PLAYER, GameRuleFactory.createBooleanRule(false));
 
 }
