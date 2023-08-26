@@ -18,7 +18,7 @@ public class NoEndMixin {
     @Inject(method = "onEntityCollision", at = @At("HEAD"))
     private void injectOnEntityCollision(BlockState state, World world, BlockPos pos, Entity entity, CallbackInfo ci) {
 
-        if (world.getGameRules().getBoolean(net.arcticwarmth.noend.noend.DisableEnd.DISABLE_END) && world instanceof ServerWorld && entity.canUsePortals() && !entity.hasVehicle() && !entity.hasPassengers() && entity.getWorld().getRegistryKey() != World.END) {
+        if (world.getGameRules().getBoolean(net.arcticwarmth.noend.noend.server.DisableEndServer.DISABLE_END) && world instanceof ServerWorld && entity.canUsePortals() && !entity.hasVehicle() && !entity.hasPassengers() && entity.getWorld().getRegistryKey() != World.END) {
 
             if(entity.isPlayer()) {
 
