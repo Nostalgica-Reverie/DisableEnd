@@ -12,19 +12,18 @@
     "noend.mixins.json"
   ],
   "license": "MIT",
-  "icon": "assets/noend/icon.png",
-  "environment": "*",
+  "environment": "server",
   "entrypoints": {
-    "client": [
-      "net.arcticwarmth.noend.noend.client.DisableEndClient"
-    ],
     "main": [
       "net.arcticwarmth.noend.noend.DisableEnd"
+    ],
+    "server": [
+      "net.arcticwarmth.noend.noend.server.DisableEndServer"
     ]
   },
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": ">=1.20"
   }
 }

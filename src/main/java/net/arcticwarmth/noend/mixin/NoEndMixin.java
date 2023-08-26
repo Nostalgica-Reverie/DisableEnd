@@ -18,8 +18,7 @@ public class NoEndMixin {
     @Inject(method = "onEntityCollision", at = @At("HEAD"))
     private void injectOnEntityCollision(BlockState state, World world, BlockPos pos, Entity entity, CallbackInfo ci) {
 
-
-        if (world.getGameRules().getBoolean(net.arcticwarmth.noend.noend.DisableEnd.DISABLE_END) && world instanceof ServerWorld && entity.canUsePortals() && !entity.hasVehicle() && !entity.hasPassengers() && entity.world.getRegistryKey() != World.END) {
+        if (world.getGameRules().getBoolean(net.arcticwarmth.noend.noend.server.DisableEndServer.DISABLE_END) && world instanceof ServerWorld && entity.canUsePortals() && !entity.hasVehicle() && !entity.hasPassengers() && entity.getWorld().getRegistryKey() != World.END) {
 
             if(entity.isPlayer()) {
 
@@ -28,13 +27,13 @@ public class NoEndMixin {
                     double spawnx = entity.getServer().getPlayerManager().getPlayer(entity.getUuid()).getSpawnPointPosition().getX();
                     double spawnz = entity.getServer().getPlayerManager().getPlayer(entity.getUuid()).getSpawnPointPosition().getZ();
                     double spawnY = entity.getServer().getPlayerManager().getPlayer(entity.getUuid()).getSpawnPointPosition().getY();
-                    int[] tpos = FindRespawnPos((int)spawnx, (int)spawnY, (int)spawnz, entity.world);
+                    int[] tpos = FindRespawnPos((int)spawnx, (int)spawnY, (int)spawnz, entity.getWorld());
                     entity.teleport(tpos[0], tpos[1], tpos[2]);
                 } else {
                     //Add no bed found message
-                    double spawnx = entity.world.getSpawnPos().getX();
-                    double spawnz = entity.world.getSpawnPos().getZ();
-                    double spawnY = entity.world.getSpawnPos().getY();
+                    double spawnx = entity.getWorld().getSpawnPos().getX();
+                    double spawnz = entity.getWorld().getSpawnPos().getZ();
+                    double spawnY = entity.getWorld().getSpawnPos().getY();
                     entity.teleport(spawnx, spawnY, spawnz);
                 }
 
@@ -42,9 +41,9 @@ public class NoEndMixin {
                 System.out.println("Respawned");
             } else {
 
-                double spawnx = entity.world.getSpawnPos().getX();
-                double spawnz = entity.world.getSpawnPos().getZ();
-                double spawnY = entity.world.getSpawnPos().getY();
+                double spawnx = entity.getWorld().getSpawnPos().getX();
+                double spawnz = entity.getWorld().getSpawnPos().getZ();
+                double spawnY = entity.getWorld().getSpawnPos().getY();
                 entity.teleport(spawnx, spawnY, spawnz);
                 System.out.println("Teleported");
             }
