@@ -2,10 +2,21 @@
 
 A simple quick-toggleable fabric mod to disable the end. To toggle the end run `/gamerule doDisableEnd true`
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://choosealicense.com/licenses/mit/)  
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://choosealicense.com/licenses/mit/)
 [![ModLoader](https://img.shields.io/badge/Modloader%20-Fabric-%23dbd0b4?style=for-the-badge)](https://opensource.org/licenses/)
+[![API](https://img.shields.io/badge/Requires%20-Fabric%20API-%23dbd0b4?style=for-the-badge)](https://modrinth.com/mod/fabric-api/)
+[![Lib](https://img.shields.io/badge/Requires%20-OWO%20lib-%23dbd0b4?style=for-the-badge)](https://modrinth.com/mod/owo-lib)
 
-## Contributing
+### Default incompatibility with modded respawn points
+
+Due to there being no reliable way to get the players respawn point, a block check is preformed but due to this block check, blocks need to be manually added to a list of valid respawn points in the config.
+
+## Requirements
+
+* Starting in version 0.2 owo lib is required for configs to work.
+* Mod is serverside ONLY and will not run clientside
+
+# Contributing
 
 Contributions are always welcome!
 
