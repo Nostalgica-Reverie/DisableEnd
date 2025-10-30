@@ -3,8 +3,11 @@
   "id": "noend",
   "version": "${version}",
   "name": "Disable End",
-  "description": "Send players to their spwnpoint when attempting to enter the End.",
-  "authors": [],
+  "description": "Send players to their spawnpoint when attempting to enter the End.",
+  "authors": [
+    "ArcticWarmth",
+    "DexrnZacAttack"
+  ],
   "contact": {
     "repo": "https://github.com/ArcticWarmth/NoEnd"
   },
@@ -24,6 +27,6 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": ">=1.21"
+    "minecraft": ">=1.21.8"
   }
 }
