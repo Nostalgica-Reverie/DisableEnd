@@ -4,9 +4,11 @@
   "version": "${version}",
   "name": "Disable End",
   "description": "Send players to their spawnpoint when attempting to enter the End.",
-  "authors": [
-    "ArcticWarmth",
+  "contributors": [
     "DexrnZacAttack"
+  ],
+  "authors": [
+    "ArcticWarmth"
   ],
   "contact": {
     "repo": "https://github.com/ArcticWarmth/NoEnd"
